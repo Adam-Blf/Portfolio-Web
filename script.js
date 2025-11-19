@@ -199,6 +199,62 @@ document.querySelectorAll('.language-progress').forEach(bar => {
 // ===================================================
 let allProjects = [];
 
+// Projets locaux enrichis avec descriptions détaillées
+const LOCAL_PROJECTS = {
+    'Blackjack-Simulator': {
+        description: '🃏 Simulateur de Blackjack professionnel en Python avec POO avancée, 5 stratégies IA (Basic, Martingale, Card Counting), statistiques détaillées et tests >95% coverage',
+        topics: ['python', 'ai', 'machine-learning', 'game', 'statistics', 'poo', 'pytest']
+    },
+    'EFREI-NLP-Anime-Recommendation': {
+        description: '🎯 Moteur de recommandation d\'anime utilisant TF-IDF + similarité cosinus sur les synopsis. CLI interactif avec autocomplétion pour découvrir des animes similaires.',
+        topics: ['nlp', 'machine-learning', 'recommendation-system', 'tfidf', 'python', 'sklearn']
+    },
+    'ExecelCleaner': {
+        description: '📊 Application Tkinter pour nettoyer et normaliser des fichiers Excel/CSV. Suppression de colonnes, normalisation de dates, export Excel avec interface drag-and-drop.',
+        topics: ['python', 'tkinter', 'data-cleaning', 'excel', 'automation', 'pandas']
+    },
+    'folder-analyzer-web': {
+        description: '📂 Outil web 100% côté client pour analyser les structures de répertoires. Vue arborescente interactive, extraction de contenu, export JSON sans serveur.',
+        topics: ['javascript', 'web', 'file-system', 'analysis', 'vanilla-js', 'client-side']
+    },
+    'J.A.R.V.I.S': {
+        description: '🤖 Assistant virtuel local avec LLM Qwen2, reconnaissance vocale Vosk, synthèse vocale TTS et actions système sécurisées. 3 interfaces: CLI, GUI Clippy, dashboard web.',
+        topics: ['ai', 'llm', 'voice-recognition', 'assistant', 'python', 'fastapi', 'llama-cpp']
+    },
+    'Langue-des-signes': {
+        description: '🤟 Plateforme IA de détection langue des signes avec MediaPipe. Support alphabet A-Z, 7 langues, mode apprentissage interactif, feedback vocal TTS et accélération GPU PyTorch/ONNX.',
+        topics: ['ai', 'computer-vision', 'sign-language', 'mediapipe', 'machine-learning', 'python', 'pytorch']
+    },
+    'Mapy': {
+        description: '🗺️ Visualiseur de relations interactif Streamlit. Import/export Excel, algorithmes de mise en page multiples (spring, Kamada-Kawai), export PNG haute qualité.',
+        topics: ['python', 'streamlit', 'network-graph', 'visualization', 'networkx', 'matplotlib']
+    },
+    'pin-collector': {
+        description: '🎴 Gestionnaire de collections de pins avec Streamlit. Vues carte/tableau, filtres puissants, import/export Excel, édition inline et persistance locale.',
+        topics: ['python', 'streamlit', 'collection-management', 'excel', 'web', 'pandas']
+    },
+    'Taskmate': {
+        description: '✅ Gestionnaire de tâches intelligent MERN Stack avec priorisation IA scikit-learn. Dashboard statistiques, classification automatique (urgent/important), API REST complète.',
+        topics: ['react', 'nodejs', 'mongodb', 'machine-learning', 'task-management', 'fullstack', 'express']
+    },
+    'Calculator-JS': {
+        description: '🧮 Calculatrice scientifique JavaScript avec historique persistant, fonctions avancées (√, x², π), support clavier et design responsive.',
+        topics: ['javascript', 'calculator', 'web', 'vanilla-js', 'localstorage']
+    },
+    'Pong-Game': {
+        description: '🏓 Jeu Pong Canvas avec IA à 4 niveaux de difficulté, mode multijoueur local, système de pause et scores persistants.',
+        topics: ['javascript', 'game', 'canvas', 'ai', 'pong', 'multiplayer']
+    },
+    'Snake-Game': {
+        description: '🐍 Snake avec niveaux progressifs, obstacles dynamiques, leaderboard top 10, 4 difficultés et effets sonores Web Audio API.',
+        topics: ['javascript', 'game', 'canvas', 'snake', 'web-audio', 'leaderboard']
+    },
+    'Guess-The-Number': {
+        description: '🎲 Jeu éducatif de devinette de nombres avec indices, historique, modal de victoire et animations interactives.',
+        topics: ['javascript', 'game', 'educational', 'web', 'animation']
+    }
+};
+
 async function fetchGitHubProjects() {
     try {
         const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=100`, {
@@ -212,7 +268,21 @@ async function fetchGitHubProjects() {
             throw new Error('Erreur lors de la récupération des projets');
         }
         
-        const repos = await response.json();
+        let repos = await response.json();
+        
+        // Enrichir les repos avec les données locales
+        repos = repos.map(repo => {
+            const localData = LOCAL_PROJECTS[repo.name];
+            if (localData) {
+                return {
+                    ...repo,
+                    description: repo.description || localData.description,
+                    topics: [...new Set([...(repo.topics || []), ...(localData.topics || [])])],
+                    enhanced: true
+                };
+            }
+            return repo;
+        });
         
         // Filter out forks and sort by stars
         allProjects = repos
