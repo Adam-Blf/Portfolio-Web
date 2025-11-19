@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio d'Adam Beloucif - Étudiant en Data Engineering & IA à l'EFREI Paris">
+    <meta name="keywords" content="Data Engineering, IA, Machine Learning, Python, Portfolio, Adam Beloucif">
+    <meta name="author" content="Adam Beloucif">
+    <title>Adam Beloucif | Portfolio Data Engineering & IA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-brand">Adam Beloucif</a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Accueil</a></li>
+                <li><a href="#about" class="nav-link">À propos</a></li>
+                <li><a href="#skills" class="nav-link">Compétences</a></li>
+                <li><a href="#projects" class="nav-link">Projets</a></li>
+                <li><a href="#experience" class="nav-link">Expérience</a></li>
+                <li><a href="#education" class="nav-link">Formation</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="greeting">Bonjour, je suis</span>
+                    <span class="name">Adam Beloucif</span>
+                </h1>
+                <p class="hero-subtitle">
+                    <span class="typing-text" id="typingText"></span>
+                    <span class="cursor">|</span>
+                </p>
+                <p class="hero-description">
+                    Étudiant en Mastère Data Engineering & IA à l'EFREI Paris<br>
+                    À la recherche d'une alternance de 24 mois à partir de septembre 2025
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-code"></i> Mes Projets
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Me Contacter
+                    </a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://github.com/Adam-Blf" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/adambeloucif" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:adam.beloucif@efrei.net" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">À Propos de Moi</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Étudiant en Data Engineering & IA</h3>
+                    <p class="highlight">
+                        Passionné par la transformation des données en solutions concrètes, 
+                        je mène une transition ambitieuse de la communication digitale vers 
+                        l'ingénierie des données.
+                    </p>
+                    <p>
+                        Mon parcours unique allie une expertise en stratégie digitale et gestion 
+                        de projets (Bachelor Communication Digitale & Internationale) avec une 
+                        spécialisation technique en cours sur les architectures Big Data, 
+                        l'IA générative et le Cloud (Mastère RNCP Niveau 7).
+                    </p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Chevilly-Larue, Île-de-France</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>07 86 46 68 34</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>adam.beloucif@efrei.net</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Recherche alternance 24 mois (Sept. 2025)</span>
+                        </div>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="10">0</span>
+                            <span class="stat-label">Projets GitHub</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="5">0</span>
+                            <span class="stat-label">Certifications</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="3">0</span>
+                            <span class="stat-label">Années d'Expérience Associative</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title">Compétences</h2>
+            <div class="skills-content">
+                <div class="skills-category">
+                    <h3><i class="fas fa-code"></i> Techniques</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>SQL/NoSQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>Cloud (AWS/Azure)</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Machine Learning</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-robot"></i>
+                            <span>LLM & IA Générative</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-stream"></i>
+                            <span>Data Pipelines</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git & GitHub</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Data Visualization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3><i class="fas fa-comments"></i> Communication & Management</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-users"></i>
+                            <span>Leadership</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Gestion de Projet Agile</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-bullhorn"></i>
+                            <span>Communication Digitale</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-handshake"></i>
+                            <span>Négociation</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Vulgarisation Technique</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Analyse Besoins Métiers</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3><i class="fas fa-language"></i> Langues</h3>
+                    <div class="language-bars">
+                        <div class="language-item">
+                            <div class="language-info">
+                                <span>Français</span>
+                                <span class="language-level">Natif</span>
+                            </div>
+                            <div class="language-bar">
+                                <div class="language-progress" data-progress="100"></div>
+                            </div>
+                        </div>
+                        <div class="language-item">
+                            <div class="language-info">
+                                <span>Anglais</span>
+                                <span class="language-level">Professionnel</span>
+                            </div>
+                            <div class="language-bar">
+                                <div class="language-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="language-item">
+                            <div class="language-info">
+                                <span>Espagnol</span>
+                                <span class="language-level">Professionnel (Erasmus Málaga)</span>
+                            </div>
+                            <div class="language-bar">
+                                <div class="language-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="certifications">
+                <h3><i class="fas fa-certificate"></i> Certifications</h3>
+                <div class="cert-grid">
+                    <div class="cert-item">
+                        <i class="fas fa-award"></i>
+                        <span>Introduction to Artificial Intelligence</span>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-award"></i>
+                        <span>Career Essentials in Generative AI (Microsoft & LinkedIn)</span>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-award"></i>
+                        <span>Inbound (HubSpot)</span>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-award"></i>
+                        <span>Generative AI: Thoughtful Online Search</span>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-award"></i>
+                        <span>Streamlining Work with Microsoft Copilot</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">Mes Projets</h2>
+            <p class="section-subtitle">Découvrez mes réalisations en Data Engineering, IA et développement</p>
+            
+            <div class="projects-filters">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="python">Python</button>
+                <button class="filter-btn" data-filter="javascript">JavaScript</button>
+                <button class="filter-btn" data-filter="ai">IA & ML</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid">
+                <div class="loading-projects">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Chargement des projets GitHub...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2 class="section-title">Expérience Professionnelle</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Décembre 2024 - Septembre 2025</div>
+                        <h3>Chargé de Communication Digitale</h3>
+                        <h4>EPSM Lille-Métropole - GHT Psy NPdC</h4>
+                        <ul>
+                            <li>Refonte complète de l'univers digital (analyse, benchmark, cahier des charges)</li>
+                            <li>Actions de communication pour l'attractivité médicale (vidéos, podcasts, contenus)</li>
+                            <li>Organisation d'événements (colloques, salons nationaux/internationaux)</li>
+                        </ul>
+                        <div class="tags">
+                            <span class="tag">Communication</span>
+                            <span class="tag">Marketing Digital</span>
+                            <span class="tag">Gestion de Projet</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Février 2024 - Août 2025</div>
+                        <h3>Vice Président</h3>
+                        <h4>BDE ISIT</h4>
+                        <ul>
+                            <li>Gestion de projet et leadership d'équipe</li>
+                            <li>Organisation d'événements étudiants majeurs</li>
+                            <li>Négociation et gestion des relations partenariales</li>
+                        </ul>
+                        <div class="tags">
+                            <span class="tag">Leadership</span>
+                            <span class="tag">Management</span>
+                            <span class="tag">Événementiel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Mai 2024 - Juillet 2024</div>
+                        <h3>Stagiaire Communication</h3>
+                        <h4>DE NOUVEL ARCHITECT POUR COMMUNICATION</h4>
+                        <ul>
+                            <li>Création de contenu et gestion des réseaux sociaux</li>
+                            <li>Développement de la marque et storytelling visuel</li>
+                            <li>Relations presse et collaboration en équipe</li>
+                        </ul>
+                        <div class="tags">
+                            <span class="tag">Content Creation</span>
+                            <span class="tag">Social Media</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Mars 2024 - Juin 2024</div>
+                        <h3>Président</h3>
+                        <h4>BDE Efrei</h4>
+                        <ul>
+                            <li>Leadership et management d'une association étudiante de 500+ membres</li>
+                            <li>Coordination d'équipe et prise de décision stratégique</li>
+                            <li>Gestion de budget et organisation d'événements majeurs</li>
+                        </ul>
+                        <div class="tags">
+                            <span class="tag">Présidence</span>
+                            <span class="tag">Gestion</span>
+                            <span class="tag">Stratégie</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Mai 2023 - Juillet 2023</div>
+                        <h3>Assistant Scrum Master</h3>
+                        <h4>BNP Paribas</h4>
+                        <ul>
+                            <li>Support méthodologie Scrum et facilitation des processus Agile</li>
+                            <li>Organisation et animation de réunions Scrum</li>
+                            <li>Suivi des indicateurs de performance et amélioration continue</li>
+                        </ul>
+                        <div class="tags">
+                            <span class="tag">Agile</span>
+                            <span class="tag">Scrum</span>
+                            <span class="tag">Coordination</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education">
+        <div class="container">
+            <h2 class="section-title">Formation</h2>
+            <div class="education-grid">
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-content">
+                        <div class="education-date">2025 - 2027</div>
+                        <h3>Mastère Data Engineering & AI</h3>
+                        <h4>EFREI Paris - Grande école du numérique</h4>
+                        <p>Spécialisation en architectures Big Data, IA générative, Cloud Computing et Data Governance (RNCP Niveau 7)</p>
+                        <div class="education-highlight">
+                            <i class="fas fa-search"></i>
+                            <span>Recherche d'alternance 24 mois (Septembre 2025)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="education-content">
+                        <div class="education-date">2022 - 2025</div>
+                        <h3>Bachelor Communication Digitale & International</h3>
+                        <h4>EFREI Paris & ISIT Intercultural School</h4>
+                        <p>Formation en Marketing Digital International, stratégie de communication et gestion de projets</p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="education-content">
+                        <div class="education-date">2023 - 2024</div>
+                        <h3>Erasmus - Communication et Médias</h3>
+                        <h4>Universidad de Málaga, Espagne</h4>
+                        <p>Semestre d'échange international en communication et études des médias</p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-anchor"></i>
+                    </div>
+                    <div class="education-content">
+                        <div class="education-date">2020 - 2021</div>
+                        <h3>Préparation Militaire Marine (PMM) Kieffer</h3>
+                        <h4>Marine Nationale</h4>
+                        <p>Formation militaire : tir, lutte incendie, cérémonies, permis bateau, PSC1 (Mention Assez Bien)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Me Contacter</h2>
+            <p class="section-subtitle">Vous avez un projet data ou une opportunité d'alternance ? Discutons-en !</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Coordonnées</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:adam.beloucif@efrei.net">adam.beloucif@efrei.net</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Téléphone</strong>
+                            <a href="tel:+33786466834">07 86 46 68 34</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Localisation</strong>
+                            <span>Chevilly-Larue, Île-de-France</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <strong>LinkedIn</strong>
+                            <a href="https://www.linkedin.com/in/adambeloucif" target="_blank">linkedin.com/in/adambeloucif</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <strong>GitHub</strong>
+                            <a href="https://github.com/Adam-Blf" target="_blank">github.com/Adam-Blf</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-availability">
+                        <i class="fas fa-calendar-check"></i>
+                        <div>
+                            <strong>Disponibilité</strong>
+                            <p>Alternance 24 mois à partir de Septembre 2025</p>
+                            <p class="availability-rhythm">Rythme : 2 semaines entreprise / 1 semaine école</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Envoyer
+                        </button>
+                    </form>
+                    <div class="form-success hidden" id="formSuccess">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Message envoyé avec succès !</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Adam Beloucif</h3>
+                    <p>Étudiant en Data Engineering & IA</p>
+                    <p>EFREI Paris</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#projects">Projets</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Réseaux Sociaux</h3>
+                    <div class="footer-social">
+                        <a href="https://github.com/Adam-Blf" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/adambeloucif" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:adam.beloucif@efrei.net"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Adam Beloucif. Tous droits réservés.</p>
+                <p>Fait avec <i class="fas fa-heart"></i> à Paris</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
