@@ -312,7 +312,7 @@ Code open source - libre d'utilisation comme template pour votre propre portfoli
 
 **Adam Beloucif**
 - Email: adam.beloucif@efrei.net
-- LinkedIn: [@adambeloucif](https://www.linkedin.com/in/adambeloucif)
+- LinkedIn: [@adambeloucif](https://www.linkedin.com/in/adambeloucif/)
 - GitHub: [@Adam-Blf](https://github.com/Adam-Blf)
 - Localisation: Chevilly-Larue, Île-de-France
 
